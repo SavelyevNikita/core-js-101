@@ -22,6 +22,13 @@
  */
 function findElement(/* arr, value */) {
   throw new Error('Not implemented');
+  // const result = arr.map((item, index) => {
+  //   console.log(item, index);
+  //   if (item === value) {
+  //     return index;
+  //   }
+  // });
+  // return (result === 1) ? result : -1;
 }
 
 /**

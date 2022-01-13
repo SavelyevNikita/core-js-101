@@ -212,8 +212,39 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
+function getRectangleString(width, height) {
+  // throw new Error('Not implemented');
+  const res = [];
+  for (let hi = 0; hi < height; hi += 1) {
+    for (let wi = 0; wi < width; wi += 1) {
+      if (hi === 0) {
+        if (wi === 0) {
+          res.push('┌');
+        } else if ((wi + 1) === width) {
+          res.push('┐\n');
+        } else {
+          res.push('─');
+        }
+      } else if ((hi + 1) === height) {
+        if (wi === 0) {
+          res.push('└');
+        } else if ((wi + 1) === width) {
+          res.push('┘\n');
+        } else {
+          res.push('─');
+        }
+      } else if (!(hi === 0) && !((hi + 1) === height)) {
+        if (wi === 0) {
+          res.push('│');
+        } else if ((wi + 1) === width) {
+          res.push('│\n');
+        } else {
+          res.push(' ');
+        }
+      }
+    }
+  }
+  return res.join('');
 }
 
 
@@ -233,8 +264,10 @@ function getRectangleString(/* width, height */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const strOld = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const strNew = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  return str.split('').map((item) => ((strOld.includes(item)) ? strNew[strOld.indexOf(item)] : item)).join('');
 }
 
 /**
