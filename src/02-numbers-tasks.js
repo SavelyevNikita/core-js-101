@@ -170,8 +170,7 @@ function parseNumberFromString(value) {
  */
 function getParallelepipedDiagonal(a, b, c) {
   // throw new Error('Not implemented');
-  const rectangular = Math.sqrt(a ** 2 + b ** 2);
-  return Math.sqrt(rectangular ** 2 + c ** 2);
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 

@@ -20,15 +20,15 @@
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
-function findElement(/* arr, value */) {
-  throw new Error('Not implemented');
-  // const result = arr.map((item, index) => {
-  //   console.log(item, index);
-  //   if (item === value) {
-  //     return index;
-  //   }
-  // });
-  // return (result === 1) ? result : -1;
+function findElement(arr, value) {
+  // throw new Error('Not implemented');
+  const result = arr.findIndex((item, index) => return item === value) ? index : null);
+  console.log(result);
+  if (result) {
+    return result;
+  } else if (!result) {
+    return -1;
+  }
 }
 
 /**
