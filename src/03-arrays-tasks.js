@@ -39,14 +39,12 @@ function findElement(arr, value) {
 // function generateOdds(len) {
 function generateOdds(/* len */) {
   throw new Error('Not implemented');
-
   // const arr = [];
   // let odd = 1;
   // for (let i = 0; i < len; i += 1) {
   //   arr.push(odd);
   //   odd += 2;
   // }
-  // console.log(arr);
   // return arr;
 }
 
@@ -96,8 +94,9 @@ function getArrayOfPositives(arr) {
  *    [ 1, 2, 3, 4, 5 ] => []
  *    [ 'cat, 'dog', 'raccoon' ] => [ 'cat', 'dog', 'raccoon' ]
  */
-function getArrayOfStrings(/* arr */) {
-  throw new Error('Not implemented');
+function getArrayOfStrings(arr) {
+  // throw new Error('Not implemented');
+  return arr.filter((item) => typeof (item) === 'string');
 }
 
 /**
@@ -113,8 +112,9 @@ function getArrayOfStrings(/* arr */) {
  *    [ 1, 2, 3, 4, 5, 'false' ]         => [ 1, 2, 3, 4, 5, 'false' ]
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
-function removeFalsyValues(/* arr */) {
-  throw new Error('Not implemented');
+function removeFalsyValues(arr) {
+  // throw new Error('Not implemented');
+  return arr.filter((item) => Boolean(item));
 }
 
 /**
